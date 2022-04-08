@@ -9,4 +9,4 @@
 
 1. clona o projeto
 1. Abrir a pasta do projeto em um terminal e executar o comando npm install ou npm i
-1. Agora executa o comando npm typeorm migration:generate
+1. Agora executa o comando npm typeorm migration:run
