@@ -1,0 +1,19 @@
+{
+   "type": "postgres",
+   "host": "localhost",
+   "port": 5432,
+   "username": "postgres",
+   "password": "123456",
+   "database": "pj_pessoas",
+   "entities": [
+      "./src/models/*.ts"
+   ],
+   "migrations":[
+     "./src/databases/migrations/*.ts"
+
+   ],
+   "cli":{
+     "migrationsDir": "./src/databases/migrations"
+
+   }
+}
