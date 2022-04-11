@@ -25,7 +25,11 @@ class PessoaService{
    }
   public async criarPessoa({ nome, email, telefone, user }: Request): Promise<Pessoa> {
     this.campoVazio({ nome, email, telefone, user });
-    const pessoaDB = this.pessoaRepository.findByEmail(email);
+    const pessoaDB = await this.pessoaRepository.findByEmail(email, user);
+    if(pessoaDB){
+      throw new AppError('Você já cadastrou esse email', 400)
+    }
+    
     const pessoa = this.pessoaRepository.create({
       nome,
       email,

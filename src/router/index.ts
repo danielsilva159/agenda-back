@@ -24,7 +24,7 @@ function verifyJWT(req: Request, res: Response, next: NextFunction){
   
 }
 
-routes.use(`${prefixRoutes}/users`, verifyJWT, userRoutes);
+routes.use(`${prefixRoutes}/users`, userRoutes);
 routes.use(`${prefixRoutes}/pessoas`, verifyJWT, pessoaRoutes);
 routes.use(`${prefixRoutes}/sessions`, sessionRoutes);
 

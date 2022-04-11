@@ -5,7 +5,6 @@ import PessoaService from '../services/PessoaService';
 class PessoaController{
 
   public async create(request: Request, response: Response) {
-    console.log(request.body);
     
     const { nome, email, telefone, user} = request.body;
     const pessoaRepository = new PessoaRepository();

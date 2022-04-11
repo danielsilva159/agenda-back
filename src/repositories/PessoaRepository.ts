@@ -1,5 +1,6 @@
 import { getRepository, Repository } from "typeorm";
 import ICreatePessoaDTO from "../dto/ICreatePessoaDTO";
+import User from "../interfaces/user";
 import Pessoa from "../models/Pessoas";
 import IPessoasRepository from "./IPessoasRepository";
 
@@ -27,9 +28,9 @@ class PessoaRepository implements IPessoasRepository {
       where: {id}
     })
   }
-  public async findByEmail(email: string): Promise<Pessoa | undefined> {
+  public async findByEmail(email: string, user: User): Promise<Pessoa | undefined> {
     return this.ormRepository.findOne({
-      where:{email}
+      where:{email, user}
     })
   }
 

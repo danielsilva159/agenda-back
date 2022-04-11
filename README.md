@@ -9,4 +9,6 @@
 
 1. clona o projeto
 1. Abrir a pasta do projeto em um terminal e executar o comando npm install ou npm i
+1. Abrir o arquivo ormconfig.json e alterar as informações de acesso a base de dados com as informações do seu postgres
+1. Depois criar a base de dados pj_pessoas
 1. Agora executa o comando npm typeorm migration:run
